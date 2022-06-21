@@ -1,0 +1,13 @@
+{
+    "name": "UCP",
+    "alias": "ucp",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\UCP\\Providers\\UCPServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,25 @@
+{
+    "name": "yezzdesign/ucp-module",
+    "description": "User Control Panel, for administration the Users",
+    "type": "laravel-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Scholz",
+            "email": "yezz.design@schodie.de"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\UCP\\": ""
+        }
+    }
+}
