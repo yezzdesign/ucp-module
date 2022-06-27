@@ -4,7 +4,9 @@ namespace Modules\UCP\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
-use Modules\UCP\Logical\Start;
+use Modules\ACP\Services\PageService;
+use Modules\ACP\Services\TableService;
+use Modules\UCP\Services\StartService;
 
 class UCPServiceProvider extends ServiceProvider
 {
@@ -30,7 +32,7 @@ class UCPServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
 
-        $start  =   new Start();
+        new StartService();
     }
 
     /**
@@ -41,6 +43,9 @@ class UCPServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+
+        $this->app->singleton('UCPEditPage', PageService::class);
+        $this->app->singleton('UCPIndexTable', TableService::class);
     }
 
     /**

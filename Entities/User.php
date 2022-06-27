@@ -44,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function getAllUsersSortedPaginated() {
+        return self::orderBy('id', 'desc')->paginate(25);
+    }
+
 }

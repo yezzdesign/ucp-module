@@ -14,6 +14,6 @@ return [
     'table.head.date'     => 'Registration Date',
     'table.head.delete'   => 'Delete',
     'table.td.active'     => 'Active',
-    'table.role.admin'      =>  'Administrator',
+    'table.role.admin'      =>  'Admin',
     'table.role.user'       =>  'User',
 ];

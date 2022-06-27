@@ -17,9 +17,7 @@ class UCPController extends Controller
      */
     public function index()
     {
-        // $posts  =   Posts::orderBy('id', 'desc')->paginate(25)
-        $users  =   User::orderBy('id', 'desc')->paginate(25);
-        return view('ucp::index', compact('users'));
+        return view('ucp::index', ['users' => User::getAllUsersSortedPaginated()]);
     }
 
     /**
